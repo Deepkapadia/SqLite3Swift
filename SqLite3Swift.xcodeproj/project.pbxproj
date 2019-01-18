@@ -14,6 +14,10 @@
 		228366FF1EF3FA6C000BB050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228366FD1EF3FA6C000BB050 /* LaunchScreen.storyboard */; };
 		2283670A1EF3FA6C000BB050 /* SqLite3SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228367091EF3FA6C000BB050 /* SqLite3SwiftTests.swift */; };
 		228367151EF3FA6C000BB050 /* SqLite3SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228367141EF3FA6C000BB050 /* SqLite3SwiftUITests.swift */; };
+		228367231EF3FC9E000BB050 /* emp.db in Resources */ = {isa = PBXBuildFile; fileRef = 228367221EF3FC9E000BB050 /* emp.db */; };
+		228367271EF3FD26000BB050 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 228367251EF3FD26000BB050 /* libsqlite3.0.tbd */; };
+		228367281EF3FD26000BB050 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 228367261EF3FD26000BB050 /* libsqlite3.tbd */; };
+		2283672F1EF3FFB3000BB050 /* dbclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283672E1EF3FFB3000BB050 /* dbclass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 		228367101EF3FA6C000BB050 /* SqLite3SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqLite3SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		228367141EF3FA6C000BB050 /* SqLite3SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqLite3SwiftUITests.swift; sourceTree = "<group>"; };
 		228367161EF3FA6C000BB050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228367221EF3FC9E000BB050 /* emp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = emp.db; sourceTree = "<group>"; };
+		228367251EF3FD26000BB050 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		228367261EF3FD26000BB050 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2283672D1EF3FF51000BB050 /* SqLite3Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SqLite3Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		2283672E1EF3FFB3000BB050 /* dbclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dbclass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228367271EF3FD26000BB050 /* libsqlite3.0.tbd in Frameworks */,
+				228367281EF3FD26000BB050 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +88,14 @@
 		228366E81EF3FA6C000BB050 = {
 			isa = PBXGroup;
 			children = (
+				2283672E1EF3FFB3000BB050 /* dbclass.swift */,
+				2283672D1EF3FF51000BB050 /* SqLite3Swift-Bridging-Header.h */,
+				228367221EF3FC9E000BB050 /* emp.db */,
 				228366F31EF3FA6C000BB050 /* SqLite3Swift */,
 				228367081EF3FA6C000BB050 /* SqLite3SwiftTests */,
 				228367131EF3FA6C000BB050 /* SqLite3SwiftUITests */,
 				228366F21EF3FA6C000BB050 /* Products */,
+				228367241EF3FD26000BB050 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +138,15 @@
 				228367161EF3FA6C000BB050 /* Info.plist */,
 			);
 			path = SqLite3SwiftUITests;
+			sourceTree = "<group>";
+		};
+		228367241EF3FD26000BB050 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				228367251EF3FD26000BB050 /* libsqlite3.0.tbd */,
+				228367261EF3FD26000BB050 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228367231EF3FC9E000BB050 /* emp.db in Resources */,
 				228366FF1EF3FA6C000BB050 /* LaunchScreen.storyboard in Resources */,
 				228366FC1EF3FA6C000BB050 /* Assets.xcassets in Resources */,
 				228366FA1EF3FA6C000BB050 /* Main.storyboard in Resources */,
@@ -259,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2283672F1EF3FFB3000BB050 /* dbclass.swift in Sources */,
 				228366F71EF3FA6C000BB050 /* ViewController.swift in Sources */,
 				228366F51EF3FA6C000BB050 /* AppDelegate.swift in Sources */,
 			);
@@ -414,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tops.SqLite3Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/DATA/Ankit Patel/Ankit_Swift/SqLite3Swift/SqLite3Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,6 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tops.SqLite3Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Volumes/DATA/Ankit Patel/Ankit_Swift/SqLite3Swift/SqLite3Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

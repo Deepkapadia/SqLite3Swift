@@ -15,8 +15,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        copyandpast()
         // Override point for customization after application launch.
         return true
+    }
+    
+    func copyandpast() {
+        
+        var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true);
+        let dbpath:NSString = path[0] as NSString;
+        
+        let strdbpath = dbpath.strings(byAppendingPaths: ["emp.db"])[0] ;
+        print(strdbpath);
+        let fmnager  =  FileManager.default;
+        
+        if !fmnager.fileExists(atPath: strdbpath) {
+            
+            let local  = Bundle.main.path(forResource: "emp", ofType: "db");
+            do
+            {
+                try fmnager.copyItem(atPath: local!, toPath: strdbpath)
+                
+            }
+            catch{
+                
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
